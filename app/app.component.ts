@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: "app",
-    template: `<div class="bg-success p-a-3 text-xs-center">
+    template: `<div class="bg-success p-3 text-xl-center">
                     This is SportsStore
                 </div>`
 })
