@@ -11,12 +11,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var product_repository_1 = require("./product.repository");
 var static_datasource_1 = require("./static.datasource");
+var cart_model_1 = require("./cart.model");
 var ModelModule = (function () {
     function ModelModule() {
     }
     ModelModule = __decorate([
         core_1.NgModule({
-            providers: [product_repository_1.ProductRepository, static_datasource_1.StaticDataSource]
+            providers: [product_repository_1.ProductRepository, static_datasource_1.StaticDataSource, cart_model_1.Cart]
         }), 
         __metadata('design:paramtypes', [])
     ], ModelModule);
