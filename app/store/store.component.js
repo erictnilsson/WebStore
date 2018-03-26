@@ -64,7 +64,7 @@ var StoreComponent = (function () {
     });
     StoreComponent.prototype.addProductToCart = function (product) {
         this.cart.addLine(product);
-        this.router.navigateByUrl("/cart");
+        //this.router.navigateByUrl("/cart"); 
     };
     StoreComponent = __decorate([
         core_1.Component({
