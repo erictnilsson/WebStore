@@ -8,6 +8,7 @@ import "rxjs/add/operator/map";
 
 const PROTOCOL = "http";
 const PORT = 3500;
+
 @Injectable()
 export class RestDataSource {
     baseUrl: string;
@@ -16,11 +17,11 @@ export class RestDataSource {
         this.baseUrl = `${PROTOCOL}://${location.hostname}:${PORT}/`;
     }
 
-    getProducts(): Observable<Product[]> {
+    getProducts(): Observable<any> {
         return this.sendRequest(RequestMethod.Get, "products");
     }
 
-    saveOrder(order: Order): Observable<Order> {
+    saveOrder(order: Order): Observable<any> {
         return this.sendRequest(RequestMethod.Post, "orders", order);
     }
 
