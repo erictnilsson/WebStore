@@ -15,7 +15,7 @@ export class StoreComponent {
     public selectedPage = 1;
 
     constructor(private repository: ProductRepository,
-        private cart: Cart, 
+        private cart: Cart,
         private router: Router) { }
 
     get products(): Product[] {
@@ -41,13 +41,6 @@ export class StoreComponent {
         this.changePage(1);
     }
 
-    /* 
-    get pageNumbers(): number[] {
-        return Array(Math.ceil(this.repository
-            .getProducts(this.selectedCategory).length / this.productsPerPage))
-                .fill(0).map((x, i) => i + 1);
-    }
-    */
     get pageCount(): number {
         return Math.ceil(this.repository
             .getProducts(this.selectedCategory).length / this.productsPerPage)
@@ -55,7 +48,6 @@ export class StoreComponent {
 
     addProductToCart(product: Product) {
         this.cart.addLine(product);
-        //this.router.navigateByUrl("/cart"); 
+        //this.router.navigateByUrl("/cart");
     }
-
 }

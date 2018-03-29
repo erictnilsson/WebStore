@@ -48,13 +48,6 @@ var StoreComponent = (function () {
         this.changePage(1);
     };
     Object.defineProperty(StoreComponent.prototype, "pageCount", {
-        /*
-        get pageNumbers(): number[] {
-            return Array(Math.ceil(this.repository
-                .getProducts(this.selectedCategory).length / this.productsPerPage))
-                    .fill(0).map((x, i) => i + 1);
-        }
-        */
         get: function () {
             return Math.ceil(this.repository
                 .getProducts(this.selectedCategory).length / this.productsPerPage);
@@ -64,7 +57,7 @@ var StoreComponent = (function () {
     });
     StoreComponent.prototype.addProductToCart = function (product) {
         this.cart.addLine(product);
-        //this.router.navigateByUrl("/cart"); 
+        //this.router.navigateByUrl("/cart");
     };
     StoreComponent = __decorate([
         core_1.Component({
