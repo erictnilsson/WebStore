@@ -17,16 +17,16 @@ export class RestDataSource {
         this.baseUrl = `${PROTOCOL}://${location.hostname}:${PORT}/`;
     }
 
-    getProducts(): Observable<any> {
+    getProducts(): Observable<Product[]> {
         return this.sendRequest(RequestMethod.Get, "products");
     }
 
-    saveOrder(order: Order): Observable<any> {
+    saveOrder(order: Order): Observable<Order> {
         return this.sendRequest(RequestMethod.Post, "orders", order);
     }
 
     private sendRequest(verb: RequestMethod,
-        url: string, body?: Product | Order): Observable<Product | Order> {
+        url: string, body?: Product | Order): Observable<any> {
         return this.http.request(new Request({
             method: verb,
             url: this.baseUrl + url,

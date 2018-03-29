@@ -24,7 +24,7 @@ var StaticDataSource = (function () {
             new product_model_1.Product(7, "Product 7", "Category 2", "Product 7 (Category 2)", 100),
             new product_model_1.Product(8, "Product 8", "Category 2", "Product 8 (Category 2)", 100),
             new product_model_1.Product(9, "Product 9", "Category 2", "Product 9 (Category 2)", 100),
-            new product_model_1.Product(10, "Product 10", "Category 2", "Product 10 (Category 3)", 100),
+            new product_model_1.Product(10, "Product 10", "Category 2", "Product 10 (Category 2)", 100),
             new product_model_1.Product(11, "Product 11", "Category 3", "Product 11 (Category 3)", 100),
             new product_model_1.Product(12, "Product 12", "Category 3", "Product 12 (Category 3)", 100),
             new product_model_1.Product(13, "Product 13", "Category 3", "Product 13 (Category 3)", 100),

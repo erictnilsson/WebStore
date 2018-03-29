@@ -4,7 +4,7 @@ import { Product } from "./product.model";
 @Injectable()
 export class Cart {
     public lines: CartLine[] = [];
-    public ItemCount: number = 0;
+    public itemCount: number = 0;
     public cartPrice: number = 0;
 
     addLine(product: Product, quantity: number = 1) {
@@ -33,23 +33,27 @@ export class Cart {
 
     clear() {
         this.lines = [];
-        this.ItemCount = 0;
+        this.itemCount = 0;
         this.cartPrice = 0;
     }
 
     private recalculate() {
-        this.ItemCount = 0;
+        this.itemCount = 0;
         this.cartPrice = 0;
         this.lines.forEach(l => {
-            this.ItemCount += l.quantity;
+            this.itemCount += l.quantity;
             this.cartPrice += (l.quantity * l.product.price);
         })
+
     }
 }
-export class CartLine {
-    constructor(public product: Product, public quantity: number) { }
 
-    get LineTotal() {
+export class CartLine {
+
+    constructor(public product: Product,
+        public quantity: number) { }
+
+    get lineTotal() {
         return this.quantity * this.product.price;
     }
 }

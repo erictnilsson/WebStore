@@ -12,7 +12,7 @@ var core_1 = require("@angular/core");
 var Cart = (function () {
     function Cart() {
         this.lines = [];
-        this.ItemCount = 0;
+        this.itemCount = 0;
         this.cartPrice = 0;
     }
     Cart.prototype.addLine = function (product, quantity) {
@@ -40,15 +40,15 @@ var Cart = (function () {
     };
     Cart.prototype.clear = function () {
         this.lines = [];
-        this.ItemCount = 0;
+        this.itemCount = 0;
         this.cartPrice = 0;
     };
     Cart.prototype.recalculate = function () {
         var _this = this;
-        this.ItemCount = 0;
+        this.itemCount = 0;
         this.cartPrice = 0;
         this.lines.forEach(function (l) {
-            _this.ItemCount += l.quantity;
+            _this.itemCount += l.quantity;
             _this.cartPrice += (l.quantity * l.product.price);
         });
     };
@@ -64,7 +64,7 @@ var CartLine = (function () {
         this.product = product;
         this.quantity = quantity;
     }
-    Object.defineProperty(CartLine.prototype, "LineTotal", {
+    Object.defineProperty(CartLine.prototype, "lineTotal", {
         get: function () {
             return this.quantity * this.product.price;
         },
